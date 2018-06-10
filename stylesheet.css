@@ -1,0 +1,59 @@
+h1{
+    font-family: 'Work Sans', sans-serif;
+    color:white;
+}
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+#board{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    height:540px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.column{
+    margin: -2;
+    display: inline-block;
+}
+.slotBack {
+    position: relative;
+    padding: 10px;
+}
+.slot{
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.active{
+    position: absolute;
+    box-shadow:04px 04px 10px #000000;
+    background-color: red;
+    z-index: 10;
+}
+.player1{
+    background:linear-gradient(to bottom right, #606060, #282828);
+    background-size: 100%;
+}
+.player2{ /* anoixtoxromos */
+    background:linear-gradient(to bottom right, #E8E8E8, #C0C0C0);
+    background-size: 100%;
+}
+.winners{
+    animation: blink-animation 0.8s steps(5, start) 3;
+     -webkit-animation: blink-animation 0.8s steps(5, start) 3;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+    transition: 0.5s;
+  }
+}
